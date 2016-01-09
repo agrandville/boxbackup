@@ -266,7 +266,7 @@ void HTTPResponse::ParseHeaders(IOStreamGetLine &rGetLine, int Timeout)
 			}
 
 			if(p == sizeof("Content-Length")-1
-				&& ::strncasecmp(h, "Content-Length", sizeof("Content-Length")-1) == 0)
+				&& strncasecmp(h, "Content-Length", sizeof("Content-Length")-1) == 0)
 			{
 				// Decode number
 				long len = ::strtol(h + dataStart, NULL, 10);	// returns zero in error case, this is OK
@@ -275,13 +275,13 @@ void HTTPResponse::ParseHeaders(IOStreamGetLine &rGetLine, int Timeout)
 				mContentLength = len;
 			}
 			else if(p == sizeof("Content-Type")-1
-				&& ::strncasecmp(h, "Content-Type", sizeof("Content-Type")-1) == 0)
+				&& strncasecmp(h, "Content-Type", sizeof("Content-Type")-1) == 0)
 			{
 				// Store rest of string as content type
 				mContentType = h + dataStart;
 			}
 			else if(p == sizeof("Cookie")-1
-				&& ::strncasecmp(h, "Cookie", sizeof("Cookie")-1) == 0)
+				&& strncasecmp(h, "Cookie", sizeof("Cookie")-1) == 0)
 			{
 				THROW_EXCEPTION(HTTPException, NotImplemented);
 				/*
@@ -290,7 +290,7 @@ void HTTPResponse::ParseHeaders(IOStreamGetLine &rGetLine, int Timeout)
 				*/
 			}
 			else if(p == sizeof("Connection")-1
-				&& ::strncasecmp(h, "Connection", sizeof("Connection")-1) == 0)
+				&& strncasecmp(h, "Connection", sizeof("Connection")-1) == 0)
 			{
 				// Connection header, what is required?
 				const char *v = h + dataStart;

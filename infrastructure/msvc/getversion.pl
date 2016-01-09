@@ -9,6 +9,7 @@ $basedir =~ s/\\[^\\]*$//;
 -d $basedir or die "$basedir: $!";
 chdir $basedir or die "$basedir: $!";
 
+print "base:**".$basedir."**";
 require "$basedir\\infrastructure\\BoxPlatform.pm.in";
 
 my $verfile = "$basedir/lib/common/BoxVersion.h";

@@ -68,7 +68,7 @@
     <CustomBuildStep />
     <CustomBuildStep />
     <Lib>
-      <AdditionalDependencies>$(ProjectDir)..\..\..\..\pcre\build\vc2013\Debug\pcre.lib;$(ProjectDir)..\..\..\..\pcre\build\vc2013\Debug\pcreposix.lib;$(ProjectDir)..\..\..\..\openssl\lib\libeay32.lib;$(ProjectDir)..\..\..\..\openssl\lib\ssleay32.lib;$(ProjectDir)..\..\..\..\zlib\projects\visualc10\LIB Debug\zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;$(ProjectDir)..\..\..\..\pcre\build\vc2010\debug\pcre.lib;$(ProjectDir)..\..\..\..\pcre\build\vc2010\debug\pcreposix.lib;$(ProjectDir)..\..\..\..\openssl\lib\libeay32.lib;$(ProjectDir)..\..\..\..\openssl\lib\ssleay32.lib;$(ProjectDir)..\..\..\..\zlib\projects\visualc10\\LIB Debug\zlibd.lib;Advapi32.lib;User32.lib;Gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>perl $(ProjectDir)..\getversion.pl</Command>
@@ -92,7 +92,7 @@
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalDependencies>$(ProjectDir)..\..\..\..\pcre\build\vc2013\Release\pcre.lib;$(ProjectDir)..\..\..\..\pcre\build\vc2013\Release\pcreposix.lib;$(ProjectDir)..\..\..\..\openssl\lib\libeay32.lib;$(ProjectDir)..\..\..\..\openssl\lib\ssleay32.lib;$(ProjectDir)..\..\..\..\zlib\projects\visualc10\\LIB Release\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)..\..\..\..\pcre\build\vc2013\Win32Release\pcre.lib;$(ProjectDir)..\..\..\..\pcre\build\vc2013\Win32Release\pcreposix.lib;$(ProjectDir)..\..\..\..\openssl\lib\libeay32.lib;$(ProjectDir)..\..\..\..\openssl\lib\ssleay32.lib;$(ProjectDir)..\..\..\..\zlib\projects\visualc10\\LIB Release\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>perl $(ProjectDir)..\getversion.pl</Command>
